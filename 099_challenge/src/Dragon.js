@@ -1,39 +1,35 @@
 import React, {Component} from 'react'
-import uuid from 'uuid/v4';
-
 
 class Dragon extends Component {
 
-  // name, color, favFood, id (uuid())
-
-  // locations, currLocation
-
   state = {
-    newLocation: ''
+    location: this.props.currLocation,
+    locations: this.props.locations
   };
 
-  handleClick = evt => {
+  move = evt => {
     const props = this.props;
-    this.props.move(props.location, evt.target.value, props);
-    this.setState({
-      newLocation: evt.target.value
-    });
+    const newLocation = evt.target.value;
+    props.move(props.currLocation, newLocation, props.dragonData);
+    this.setState(state => ({
+      locations: [state.location, ...state.locations.filter(loc => loc !== newLocation)],
+      location: state.location
+    }));
   };
 
   render() {
     const props = this.props;
-    const data = props.data;
+    const state = this.state;
+    const dragon = props.dragonData;
     return (
       <div>
-        <p>Name: {data.name}</p>
-        <p>Color: {data.color}</p>
-        <p>Fav Food: {data.food}</p>
+        <h3>Dragon {dragon.name}!</h3>
+        <p>looks {dragon.color} - eats {dragon.food}!!</p>
 
         <div>
-          <h3>Move me!</h3>
-
-          <select onChange={this.handleClick}>
-            {props.locations.map(l => <option value={l.name}>{l.name}</option>)}
+          <select defaultValue='none' onChange={this.move}>
+            <option disabled value='none'>Move to</option>
+            {state.locations.map(loc => <option key={loc} value={loc}>{loc}</option>)}
           </select>
         </div>
       </div>

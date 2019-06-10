@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
 
-      <Zoo />
+      <Zoo name='YaZaMaZi DragOOn'/>
     </div>
   );
 }
