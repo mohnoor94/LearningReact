@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './css/Dragon.css'
 
 class Dragon extends Component {
 
@@ -22,9 +23,9 @@ class Dragon extends Component {
     const state = this.state;
     const dragon = props.dragonData;
     return (
-      <div>
+      <div className='Dragon' style={{color:dragon.color}}>
         <h3>Dragon {dragon.name}!</h3>
-        <p>looks {dragon.color} - eats {dragon.food}!!</p>
+        <p>LOOKS {dragon.color} - EATS {dragon.food}!!</p>
 
         <div>
           <select defaultValue='none' onChange={this.move}>

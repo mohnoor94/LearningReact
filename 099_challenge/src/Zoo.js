@@ -2,21 +2,35 @@ import React, {Component} from 'react'
 import Location from "./Location";
 import uuid from 'uuid/v4';
 
-
 class Zoo extends Component {
 
-  state = {
-    locations: [
-      {name: 'Forest', dragons: [{name: 'J. Bazz', color: 'REDDD', food: 'Banana', id: uuid()}]},
+  init = () => {
+    return [
+      {
+        name: 'Forest',
+        dragons: [
+          {name: 'J. Bazz', color: 'RED', food: 'Banana', id: uuid()}]
+      },
       {
         name: 'River',
         dragons: [
           {name: 'Zen', color: 'Blue', food: 'Vegetables', id: uuid()},
-          {name: 'YuY', color: 'Yellow', food: 'Cats', id: uuid()}
+          {name: 'YuY', color: 'Black', food: 'Fish', id: uuid()}
         ]
       },
-      {name: 'Earth', dragons: [{name: 'ZaX', color: 'Transparent', food: 'HUMANS', id: uuid()}]}
-    ]
+      {
+        name: 'Earth',
+        dragons: [
+          {name: 'ZaX', color: 'Grey', food: 'HUMANS', id: uuid()},
+          {name: 'Zeos', color: 'darkcyan', food: 'Cats', id: uuid()},
+          {name: 'MatriX', color: 'darkmagenta', food: 'Gold', id: uuid()}
+        ]
+      }
+    ];
+  };
+
+  state = {
+    locations: this.init()
   };
 
   addDragon = (dragon, locName) => {
@@ -42,6 +56,8 @@ class Zoo extends Component {
 
   filterLocations = current => this.state.locations.map(loc => loc.name).filter(loc => loc !== current);
 
+  reset = () => this.setState({locations: this.init()});
+
   render() {
     const props = this.props;
     const state = this.state;
@@ -49,14 +65,14 @@ class Zoo extends Component {
     return (
       <div>
         <h1>Welcome to {props.name} ZooOO!</h1>
-        <hr/>
         {state.locations.map(l =>
-          <div>
-            <Location key={l.name} name={l.name} dragons={l.dragons} locations={this.filterLocations(l.name)}
-                      move={this.moveDragon}/>
-            <hr/>
-          </div>
+          <Location key={l.name}
+                    name={l.name}
+                    dragons={l.dragons}
+                    locations={this.filterLocations(l.name)}
+                    move={this.moveDragon}/>
         )}
+        <button onClick={this.reset} className='btn btn-warning btn-lg'>Reset</button>
       </div>
     );
   }

@@ -1,0 +1,19 @@
+.Location {
+    margin: 20px;
+    border: 5px solid darkcyan;
+    border-radius: 25px;
+}
+
+.Location-Placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.Location-Empty {
+    color: gray;
+    font-style: oblique;
+    font-size: 1.5em;
+}
