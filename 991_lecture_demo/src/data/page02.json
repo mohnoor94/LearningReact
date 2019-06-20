@@ -1,0 +1,21 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Descriptive Statistical Measures"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Measures of Location (Central Tendency)"
+        },
+        {
+          "type": "li",
+          "val": "Measures of Variation"
+        }
+      ]
+    }
+  ]
+}

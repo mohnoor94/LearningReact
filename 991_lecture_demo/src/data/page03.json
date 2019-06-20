@@ -1,0 +1,25 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Common Measures of Location (Central Tendency)"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Arithmetic Mean (Average)"
+        },
+        {
+          "type": "li",
+          "val": "Median"
+        },
+        {
+          "type": "li",
+          "val": "Mode"
+        }
+      ]
+    }
+  ]
+}
