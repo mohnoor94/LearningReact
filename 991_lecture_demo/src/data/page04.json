@@ -1,0 +1,94 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Arithmetic Mean (Average)"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "The mean of a collection of data is the sum of the observations divided by their number"
+        }
+      ]
+    },
+    {
+      "type": "equ",
+      "val": "\\bar X = \\frac{1}{n} \\sum_{i=1}^n X_i"
+    },
+    {
+      "type": "equ",
+      "val": "\\bar X: \\text{Arithmetic Mean}",
+      "class": "equation-note"
+    },
+    {
+      "type": "equ",
+      "val": "n: \\text{Sample Size}",
+      "class": "equation-note"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "For our problem, with the temperatures data:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Amman: 31, 30, 31, 31, 35, 32, 32, 31, 31, 32"
+              },
+              {
+                "type": "li",
+                "val": "Aqaba: 34, 33, 33, 33, 38, 37, 39, 35, 33, 34"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "We can conclude that the means for both cities are:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "\\text{Amman} = \\frac{31 + 30 + 31 + 31 + 35 + 32 + 32 + 31 + 31 + 32}{10} = \\frac{316}{10} = 31.6",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "\\text{Aqaba} = \\frac{34 + 33 + 33 + 33 + 38 + 37 + 39 + 35 + 33 + 34}{10} = \\frac{349}{10} = 34.9",
+                "sub": "equ",
+                "class": "equation-inline"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Now, we can confidently say that Aqaba, on average, will have higher temperatures!"
+        }
+      ]
+    }
+  ]
+}

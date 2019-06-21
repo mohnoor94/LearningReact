@@ -1,13 +1,17 @@
 import React from 'react';
-import './css/App.css';
-import ComparisonChart from "./ComparisonChart";
+
 import generateData from './helpers/dataHelpers'
 import FirstPage from "./FirstPage";
 import Page from "./Page";
 
+import './css/App.css';
+import 'katex/dist/katex.min.css';
+
 import page01 from './data/page01'
 import page02 from './data/page02'
 import page03 from './data/page03'
+import page04 from './data/page04'
+import page05 from './data/page05'
 
 function App() {
   const labels = ['Jun 21', 'Jun 22', 'Jun 23', 'Jun 24', 'Jun 25', 'Jun 26', 'Jun 27', 'Jun 28', 'Jun 29', 'Jun 30'];
@@ -63,14 +67,14 @@ function App() {
   const mean2AmmanChart = {
     ...meanTemplate,
     title: amman,
-    yEnd: 400,
+    yEnd: 320,
     threshold: meanAmmanCorrupted.val,
     data: meanAmmanCorrupted.items
   };
 
   const mean2AqabaChart = {
     ...mean1AqabaChart,
-    yEnd: 400
+    yEnd: 320
   };
 
   const medianTemplate = {
@@ -115,19 +119,27 @@ function App() {
 
   return (
     <div className="App">
-      <FirstPage />
+      <FirstPage/>
 
       <Page number={1} data={page01.elements}/>
       <Page number={2} data={page02.elements}/>
       <Page number={3} data={page03.elements}/>
+      <Page number={4} data={page04.elements}
+            charts={[
+              {title: '1.1 - Mean', chart1: mean1AmmanChart, chart2: mean1AqabaChart}
+            ]}
+      />
+      <Page number={5} data={page05.elements}
+            charts={[
+              {title: '1.2 - Mean with Outliers', chart1: mean2AmmanChart, chart2: mean2AqabaChart}
+            ]}
+      />
 
-      <ComparisonChart title='1.1 - Mean' chart1={mean1AmmanChart} chart2={mean1AqabaChart}/>
-      <ComparisonChart title='1.2 - Mean with Outliers' chart1={mean2AmmanChart} chart2={mean2AqabaChart}/>
+      {/*<ComparisonChart title='2 - Median with Outliers' chart1={medianAmmanChart} chart2={medianAqabaChart}/>*/}
 
-      <ComparisonChart title='2 - Median with Outliers' chart1={medianAmmanChart} chart2={medianAqabaChart}/>
+      {/*<ComparisonChart title='3 - Mode with Outliers' chart1={modeAmmanChart} chart2={modeAqabaChart}/>*/}
 
-      <ComparisonChart title='3 - Mode with Outliers' chart1={modeAmmanChart} chart2={modeAqabaChart}/>
-
+      <h1>Thank You =D</h1>
     </div>
   );
 }

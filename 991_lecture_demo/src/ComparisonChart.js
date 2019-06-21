@@ -3,7 +3,7 @@ import {Area, Bar, CartesianGrid, ComposedChart, Label, Legend, ReferenceLine, T
 
 import './css/ComparisonChart.css'
 
-export default class ComparisonChart extends Component {
+class ComparisonChart extends Component {
 
   static defaultProps = {
     width: 750,
@@ -15,7 +15,7 @@ export default class ComparisonChart extends Component {
     return (
       <div className='ComparisonChart'>
         <h1>{props.title}</h1>
-        <div className='ComparisonChart-Content'>
+        <div className='content'>
           {ComparisonChart.renderChart(props.chart1, props)}
           {ComparisonChart.renderChart(props.chart2, props)}
         </div>
@@ -25,7 +25,7 @@ export default class ComparisonChart extends Component {
 
   static renderChart = (chart, props) => {
     return <div>
-      <h2>{chart.title}</h2>
+      <h2 className='title'>{chart.title}</h2>
 
       <ComposedChart
         width={props.width}
@@ -55,7 +55,9 @@ export default class ComparisonChart extends Component {
 
       </ComposedChart>
 
-      <h3>{chart.key2}: {chart.threshold}</h3>
+      <h3 className='result'>{chart.key2}: {chart.threshold}</h3>
     </div>;
   }
 }
+
+export default ComparisonChart;

@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "algebra.js": "^0.2.6",
     "d3": "^5.9.2",
+    "katex": "^0.10.2",
+    "mathjax": "^2.7.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-katex": "^2.0.2",
+    "react-mathjax": "^1.0.1",
+    "react-mathjax2": "0.0.2",
     "react-scripts": "3.0.1",
     "recharts": "^1.6.2"
   },

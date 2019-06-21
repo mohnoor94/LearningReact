@@ -1,0 +1,127 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Arithmetic Mean (Average) - Cons"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Revisiting our example, we, somehow, corrupted the files we store the weather data in, so that they have some wrong data, and we are not sure what the corrupted data days are."
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "New weather data:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Amman: 31, 30, 31, 31, 35, 320, 32, 31, 31, 32",
+                "highlight": "320"
+              },
+              {
+                "type": "li",
+                "val": "Aqaba: 34, 33, 33, 33, 38, 37, 39, 35, 33, 34"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Let’s redo our calculations for the means:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "\\text{Amman} = \\frac{31 + 30 + 31 + 31 + 35 + {\\color{#b20000} 320} + 32 + 31 + 31 + 32}{10} = \\frac{604}{10} = 60.4",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "\\text{Aqaba} = \\frac{34 + 33 + 33 + 33 + 38 + 37 + 39 + 35 + 33 + 34}{10} = \\frac{349}{10} = 34.9",
+                "sub": "equ",
+                "class": "equation-inline"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "The mean can be misleading if we have outliers or extreme values",
+          "highlight": "misleading"
+        },
+        {
+          "type": "li",
+          "val": "What to do?"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Filter out these values"
+              },
+              {
+                "type": "li",
+                "val": "Try another measure of location"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Exercise: Compute the average for each of the following groups:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "26, 34, 29, 16, 34, 16"
+              },
+              {
+                "type": "li",
+                "val": "4, 7, 1, 98, 5, 2, 3"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
