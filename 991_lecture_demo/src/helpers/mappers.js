@@ -4,7 +4,7 @@ import {BlockMath} from "react-katex";
 const mapHeader = (type, value) => {
   type = type.toLowerCase();
   switch (type) {
-    case 'h1': return <h1>{value}</h1>;
+    default: case 'h1': return <h1>{value}</h1>;
     case 'h2': return <h2>{value}</h2>;
     case 'h3': return <h3>{value}</h3>;
     case 'h4': return <h4>{value}</h4>;
@@ -38,10 +38,10 @@ const toHtml = (elements) => {
   return elements.map(e => {
     if (e.type.startsWith('h')) return mapHeader(e.type, e.val);
     else if (e.type === 'ul') return <ul>{mapList(e.val)}</ul>;
-    else if (e.type === 'equ') {
-      console.log(e.class);
-      return mapEquation(e.val, e.class);
-    }
+    else if (e.type === 'equ') return mapEquation(e.val, e.class);
+
+    console.log('Element type unrecognized and will be skipped',e);
+    return null;
   })
 };
 
