@@ -1,0 +1,16 @@
+.Timer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    border: 5px solid dimgray;
+    border-radius: 20px;
+    background-color: ghostwhite;
+    z-index:100;
+    width: 150px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}

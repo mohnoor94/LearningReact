@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Page from "./Page";
+
 import './css/FirstPage.css'
 import luminusLogo from './images/luminus.png'
 
-class FirstPage extends Component {
+class FirstPage extends Page {
   render() {
     return (
       <div className='FirstPage'>

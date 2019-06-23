@@ -1,0 +1,37 @@
+.AnswersPage {
+    text-align: left;
+    padding: 50px 20px;
+    margin: 50px 25px;
+    border: 5px solid dimgray;
+    border-radius: 5px;
+    background-color: #f0f0f1;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+#answers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#answers th {
+    text-align: center;
+}
+
+#answers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#answers tr:hover {
+    background-color: #ddd;
+}
+
+#answers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #5231af;
+    color: white;
+}

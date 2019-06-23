@@ -3,6 +3,8 @@ import React from 'react';
 import generateData from './helpers/dataHelpers'
 import FirstPage from "./FirstPage";
 import Page from "./Page";
+import AnswersPage from "./AnswersPage";
+import Timer from "./Timer";
 
 import './css/App.css';
 import 'katex/dist/katex.min.css';
@@ -12,6 +14,12 @@ import page02 from './data/page02'
 import page03 from './data/page03'
 import page04 from './data/page04'
 import page05 from './data/page05'
+import page06 from './data/page06'
+import page07 from './data/page07'
+import page08 from './data/page08'
+import page09 from './data/page09'
+import page10 from './data/page10'
+import page11 from './data/page11'
 
 function App() {
   const labels = ['Jun 21', 'Jun 22', 'Jun 23', 'Jun 24', 'Jun 25', 'Jun 26', 'Jun 27', 'Jun 28', 'Jun 29', 'Jun 30'];
@@ -100,7 +108,7 @@ function App() {
   const modeTemplate = {
     ...template,
     key2: 'Mode',
-    yEnd: 350
+    yEnd: 320
   };
 
   const modeAmmanChart = {
@@ -119,26 +127,46 @@ function App() {
 
   return (
     <div className="App">
+      <Timer duration={600} hurryTime={60}/>
+
       <FirstPage/>
 
       <Page number={1} data={page01.elements}/>
       <Page number={2} data={page02.elements}/>
       <Page number={3} data={page03.elements}/>
+
       <Page number={4} data={page04.elements}
             charts={[
               {title: '1.1 - Mean', chart1: mean1AmmanChart, chart2: mean1AqabaChart}
             ]}
       />
+
       <Page number={5} data={page05.elements}
             charts={[
               {title: '1.2 - Mean with Outliers', chart1: mean2AmmanChart, chart2: mean2AqabaChart}
             ]}
       />
 
-      {/*<ComparisonChart title='2 - Median with Outliers' chart1={medianAmmanChart} chart2={medianAqabaChart}/>*/}
+      <Page number={6} data={page06.elements}/>
 
-      {/*<ComparisonChart title='3 - Mode with Outliers' chart1={modeAmmanChart} chart2={modeAqabaChart}/>*/}
+      <Page number={7} data={page07.elements}
+            charts={[
+              {title: '2 - Median with Outliers', chart1: medianAmmanChart, chart2: medianAqabaChart}
+            ]}
+      />
 
+      <Page number={8} data={page08.elements}/>
+
+      <Page number={9} data={page09.elements}
+            charts={[
+              {title: '3 - Mode with Outliers', chart1: modeAmmanChart, chart2: modeAqabaChart}
+            ]}
+      />
+
+      <Page number={10} data={page10.elements}/>
+      <Page number={11} data={page11.elements}/>
+
+      <AnswersPage/>
       <h1>Thank You =D</h1>
     </div>
   );

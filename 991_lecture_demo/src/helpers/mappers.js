@@ -13,13 +13,14 @@ const mapHeader = (type, value) => {
   }
 };
 
-const mapList = (element) => element.map(e => typeof (e.val) === 'string'
-  ? e.sub === 'equ'
-    ? <li>{mapEquation(e.val, e.class)}</li>
-    : e.highlight
-      ? <li>{mapLine(e.val, e.highlight)}</li>
-      : <li>{e.val}</li>
-  : <ul>{mapList(e.val.val)}</ul>);
+const mapList = element => element.map(e => {
+  if (typeof (e.val) === 'string') {
+    if (e.sub === 'equ') return <li>{mapEquation(e.val, e.class)}</li>;
+    else if (e.highlight) return <li>{mapLine(e.val, e.highlight)}</li>;
+    return <li className={e.class}>{e.val}</li>;
+  }
+  return <ul>{mapList(e.val.val)}</ul>;
+});
 
 const mapEquation = (equation, clazz) => {
   return <div className={clazz || 'equation'}>

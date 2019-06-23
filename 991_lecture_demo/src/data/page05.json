@@ -97,31 +97,6 @@
           }
         }
       ]
-    },
-    {
-      "type": "ul",
-      "val": [
-        {
-          "type": "li",
-          "val": "Exercise: Compute the average for each of the following groups:"
-        },
-        {
-          "type": "li",
-          "val": {
-            "type": "ul",
-            "val": [
-              {
-                "type": "li",
-                "val": "26, 34, 29, 16, 34, 16"
-              },
-              {
-                "type": "li",
-                "val": "4, 7, 1, 98, 5, 2, 3"
-              }
-            ]
-          }
-        }
-      ]
     }
   ]
 }

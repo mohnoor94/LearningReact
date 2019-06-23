@@ -1,0 +1,53 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Conclusions"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "We studied 3 common measures of location: arithmetic mean, median, and mode"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "We usually use the arithmetic mean to represent our data (sample) with a single observation"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "The arithmetic mean can be easily affected by outliers and extreme observations"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "The median is less affected by outliers and extreme observations"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "The mode is the most common observation(s)"
+        }
+      ]
+    }
+  ]
+}

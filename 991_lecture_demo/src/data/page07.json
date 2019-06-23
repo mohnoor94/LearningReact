@@ -1,0 +1,156 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Median"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "\\text{A number } m \\text{ such that: }",
+          "sub": "equ",
+          "class": "equation-inline"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "\\text{at most } 50\\% \\text{ of the observations are less than it, and}",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "\\text{at most } 50\\% \\text{ of the observations are greater than it. }",
+                "sub": "equ",
+                "class": "equation-inline"
+              }
+            ]
+          }
+        },
+        {
+          "type": "li",
+          "val": "\\text{Let:}",
+          "sub": "equ",
+          "class": "equation-inline"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "X_1, X_2, ..., X_n \\text{ be a sample of size } n, \\text{ and }",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "X_{(1)}, X_{(2)}, ..., X_{(n)} \\text{ be the sorted sample.}",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "\\text{Then the median } m \\text{ can be calculated like:}",
+                "sub": "equ",
+                "class": "equation-inline"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "equ",
+      "val": "m = \\begin{cases} X_{(\\frac{n+1}{2})} &\\quad\\text{if }n \\text{ is odd} \\\\\n \\\\\n \\frac{X_{(\\frac{n}{2})} + X_{(\\frac{n}{2} + 1)}}{2} &\\quad\\text{if }n \\text{ is even} \\\\\n  \\end{cases}\n"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Median for corrupted Amman Data:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "\\text{Data: } 31, 30, 31, 31, 35, 320, 32, 31, 31, 32",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val": "\\text{Sorted data: } 30, 31, 31, 31, {\\color{darkblue} 31}, {\\color{darkblue} 31}, 32, 32, 35, 320",
+                "sub": "equ",
+                "class": "equation-inline"
+              },
+              {
+                "type": "li",
+                "val" : "We have even number of observations, so we use the second part of the equation:"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "equ",
+      "val": "\\frac{X_{(\\frac{n}{2})} + X_{(\\frac{n}{2} + 1)}}{2} = \\frac{X_{(\\frac{10}{2})} + X_{(\\frac{10}{2} + 1)}}{2} = \\frac{X_{(5)} + X_{(6)}}{2}"
+    },
+    {
+      "type": "equ",
+      "val": "= \\frac{31 + 31}{2} = 31"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Even with extreme values, the median give us a good representation of the data.",
+          "class": "blue"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Medians for corrupted data:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Amman: 31"
+              },
+              {
+                "type": "li",
+                "val": "Aqaba: 34"
+              }
+            ]
+          }
+        },
+        {
+          "type": "li",
+          "val": "We can conclude again that Aqaba will have higher temperatures now, despite of the extreme corrupted data we have!",
+          "highlight": "despite of the extreme corrupted data we have!"
+        }
+      ]
+    }
+  ]
+}

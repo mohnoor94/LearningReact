@@ -1,0 +1,93 @@
+{
+  "elements": [
+    {
+      "type": "h1",
+      "val": "Mode"
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "What if we are only interested on the most repeated temperature?"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Mode: The most frequent observation"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "There may be more than one mode"
+              },
+              {
+                "type": "li",
+                "val": "The mode may not exist"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "Back to our corrupted data example:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Amman: 31, 30, 31, 31, 35, 320, 32, 31, 31, 32",
+                "highlight": "320"
+              },
+              {
+                "type": "li",
+                "val": "Aqaba: 34, 33, 33, 33, 38, 37, 39, 35, 33, 34"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
+          "val": "We can conclude the modes as:"
+        },
+        {
+          "type": "li",
+          "val": {
+            "type": "ul",
+            "val": [
+              {
+                "type": "li",
+                "val": "Amman: 31"
+              },
+              {
+                "type": "li",
+                "val": "Aqaba: 33"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
