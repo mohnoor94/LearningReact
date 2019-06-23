@@ -9,6 +9,15 @@
       "val": [
         {
           "type": "li",
+          "val": "We want to summarize/represent a row/group of data by just a single value"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "val": [
+        {
+          "type": "li",
           "val": "We studied 3 common measures of location: arithmetic mean, median, and mode"
         }
       ]
